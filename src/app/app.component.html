@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+        aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <form class="form-inline col-sm-2 ms-auto">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 w-50 ml-0 mr-0 mx-auto text-center">
+      <h2 class="mt-5">MNC Company</h2>
+      <button type="button" class="btn btn-warning my-3" (click)="getDataFromAPI()">Click here Employee List</button>
+      <table class="table mt-3">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>body</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of data">
+            <td>{{d.id}}</td>
+            <td>{{d.title}}</td>
+            <td>{{d.body}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
